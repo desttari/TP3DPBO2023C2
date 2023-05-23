@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Detail NAMA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style-type: none;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      #navbar {
+        color: white;
+      }
+
+      #navbar .nav-item :hover {
+        border-bottom: 3px solid white;
+      }
+
+      #artis .card {
+        width: 250px;
+      }
+
+      #artis .row a {
+        text-decoration: none;
+      }
+
+      th,
+      td {
+        padding: 10px 5px;
+      }
+
+      .card img {
+        width: 150px;
+      }
+
+      .artis-thumbnail .artis-nama {
+        color: #055160;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .artis-thumbnail .genre-nama {
+        color: #0aa2c0;
+        font-size: 14px;
+      }
+
+      .artis-thumbnail .lagu-judul {
+        color: #efbc6b;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      #footer a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bg-info"
+      id="navbar"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="index.php">
+          <img
+            src="assets/images/logo.png"
+            height="40"
+            alt="logo.png"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                aria-current="page"
+                href="index.php"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                aria-current="page"
+                href="tambah.php"
+                >DATA_TITLE Penyanyi</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="genre.php">Daftar genre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="lagu.php">Daftar lagu</a>
+                    </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 pt-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card my-5 mx-5">
+            <div class="card-header text-center">
+              <h3 class="my-0">DATA_TITLE Data Penyanyi</h3>
+            </div>
+            <div class="card-body mt-3">
+              <form method="post" enctype="multipart/form-data" id="data">
+                <div class="mb-3 row">
+                  <label for="file" class="col-sm-2 col-form-label">Foto</label>
+                  <div class="col-sm-10">
+                    <img
+                      hidden
+                      src="assets/images/IMAGE_VAL_UPDATE"
+                      alt="Foto artis"
+                      width="200"
+                    />
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="file_image"
+                      value="IMAGE_VAL_UPDATE"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="nama" class="col-sm-2 col-form-label"
+                    >Nama</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="nama"
+                      value="NAME_VAL_UPDATE"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="tahun_debut" class="col-sm-2 col-form-label"
+                    >Tahun Debut</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="tahun_debut"
+                      value="DEBUT_VAL_UPDATE"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="id_negara" class="col-sm-2 col-form-label"
+                    >Asal Negara</label
+                  >
+                  <div class="col-sm-10">
+                    <select
+                      class="form-select"
+                      name="id_negara"
+                      name="id_negara"
+                      required
+                    
+                    >
+                      <option selected disabled>-- Pilih Asal Negara --</option>
+                      OPTIONS_NEGARA
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="id_agensi" class="col-sm-2 col-form-label"
+                    >Agensi Penyanyi</label
+                  >
+                  <div class="col-sm-10">
+                    <select
+                      class="form-select"
+                      name="id_agensi"
+                      name="id_agensi"
+                      required
+                    >
+                      <option selected disabled>-- Pilih Agensi Penyanyi --</option>
+                      OPTIONS_AGENSI
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="id_type" class="col-sm-2 col-form-label">Kategori Penyanyi</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" name="id_type" required>
+                      <option selected disabled>-- Pilih Kategori Penyanyi --</option>
+                      OPTIONS_TYPE
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+
+              </form>
+            </div>
+            <div class="card-footer text-end">
+              <a href="index.php"
+                ><button type="button" class="btn btn-danger">Cancel</button></a
+              >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                name="submit"
+                form="data"
+              >
+                DATA_BUTTON
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mt-5 py-3 bg-info text-white bg-dark" id="footer">
+      <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+          <p class="my-0">
+            &copy; TP3 DPBO 2023 &#9475; Powered by
+            <a href="https://getbootstrap.com/">Bootstrap.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>
