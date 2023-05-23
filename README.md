@@ -39,7 +39,7 @@ Berikut adalah penjelasan singkat tentang setiap tabel dan kegunaannya dalam dat
 Database `db_artis` memiliki struktur tabel yang terorganisir dengan baik, dengan setiap tabel memiliki kolom-kolom yang relevan untuk menyimpan data yang diperlukan. Selain itu, terdapat kunci-kunci asing (foreign keys) yang menghubungkan tabel penyanyi dengan tabel agensi, negara, dan type, sehingga tercipta hubungan yang konsisten antara entitas-entitas yang berbeda dalam database.
 
 ### Video Preview
-
+https://github.com/desttari/TP3DPBO2023C2/assets/100773981/ceeeabab-0c96-4562-98dc-8bbb7071c84c
 
 ### Screenshots
 
